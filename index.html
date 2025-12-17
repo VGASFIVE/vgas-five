@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vgas-five | Ingénierie & Technologie</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="CSS/Style.css">
+</head>
+<body>
+
+    <header class="main-header">
+        <nav class="container">
+            <div class="logo-tech">
+                <span class="logo-v">V</span>GAS<span class="logo-five">-FIVE</span>
+            </div>
+            <ul class="nav-links">
+                <li><a href="#hero">Accueil</a></li>
+                <li><a href="#services">Expertise</a></li>
+                <li><a href="#contact-section" class="btn-nav">Lancez un projet</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section id="hero" class="hero-tech">
+            <div class="container hero-grid">
+                <div class="hero-text fade-in">
+                    <h1>L'ingénierie <span class="text-blue">Vgas-five</span></h1>
+                    <p>Nous concevons les infrastructures de demain avec une précision mathématique et une vision technologique d'avant-garde. </p>
+                    <div class="cta-group">
+                        <a href="#services" class="btn-main">Nos Services</a>
+                        <a href="#contact-section" class="btn-outline">Nous contacter</a>
+                    </div>
+                </div>
+                <div class="hero-visual">
+                    <div class="tech-blob"></div>
+                </div>
+            </div>
+        </section>
+
+        <section id="services" class="services-tech">
+            <div class="container">
+                <div class="section-header fade-in">
+                    <span class="subtitle">Expertise</span>
+                    <h2>Solutions de Haute Performance</h2>
+                    <div class="bar"></div>
+                </div>
+                
+                <div class="services-grid">
+                    <article class="service-card fade-in">
+                        <div class="service-icon">01</div>
+                        <h3>Cloud & DevOps</h3>
+                        <p>Optimisation des cycles de déploiement et scalabilité de vos infrastructures.</p>
+                    </article>
+                    <article class="service-card fade-in">
+                        <div class="service-icon">02</div>
+                        <h3>Cybersécurité</h3>
+                        <p>Protection proactive de vos données contre les intrusions sophistiquées.</p>
+                    </article>
+                    <article class="service-card fade-in">
+                        <div class="service-icon">03</div>
+                        <h3>Type de Site </h3>
+                        <p>Nous réalisons des sites vitrines pour vos entreprises et commerces !</p>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <section id="contact-section" class="contact-tech-inline">
+            <div class="container">
+                <div class="contact-wrapper fade-in">
+                    <div class="contact-info-side">
+                        <h2>Prêt à innover ?</h2>
+                        <p>Remplissez le formulaire et recevez une réponse de notre équipe sous 24h.</p>
+                        <div class="contact-mail-display">jeankingzobila8@gmail.com</div>
+                    </div>
+
+                    <div class="contact-form-side">
+                        <form action="https://formspree.io/f/mykgggyp" method="POST" class="contact-form" id="vgas-form">
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label>Nom</label>
+                                    <input type="text" name="nom" placeholder="Zobila" required>
+                                </div>
+                                <div class="form-group">
+                                    <label>Prénom</label>
+                                    <input type="text" name="prenom" placeholder="Jean" required>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label>Email ou Téléphone</label>
+                                <input type="text" name="contact" placeholder="contact@exemple.com" required>
+                            </div>
+                            <div class="form-group">
+                                <label>Description de votre besoin</label>
+                                <textarea name="message" rows="5" placeholder="Comment pouvons-nous vous aider ?" required></textarea>
+                            </div>
+                            <button type="submit" class="btn-main full-width" id="submit-btn">Envoyer la demande</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer-tech">
+        <div class="container">
+            <div class="footer-content">
+                <div class="logo-tech small">VGAS<span>-FIVE</span></div>
+                <p>&copy; 2024 Vgas-five. Tous droits réservés.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Animation au défilement
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) entry.target.classList.add('visible');
+            });
+        }, { threshold: 0.1 });
+
+        document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
+
+        // Envoi de formulaire AJAX
+        const form = document.getElementById('vgas-form');
+        const btn = document.getElementById('submit-btn');
+
+        form.addEventListener('submit', async (e) => {
+            e.preventDefault();
+            btn.disabled = true;
+            btn.innerText = "Transmission en cours...";
+            
+            try {
+                const response = await fetch(form.action, {
+                    method: 'POST',
+                    body: new FormData(form),
+                    headers: { 'Accept': 'application/json' }
+                });
+
+                if (response.ok) {
+                    btn.style.background = "#00c853";
+                    btn.innerText = "Message Reçu ! ✔";
+                    form.reset();
+                    setTimeout(() => {
+                        btn.style.background = "#0066ff";
+                        btn.innerText = "Envoyer la demande";
+                        btn.disabled = false;
+                    }, 5000);
+                } else {
+                    throw new Error();
+                }
+            } catch (err) {
+                btn.innerText = "Erreur. Réessayez.";
+                btn.disabled = false;
+            }
+        });
+    </script>
+</body>
+</html>
