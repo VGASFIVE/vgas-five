@@ -7,7 +7,6 @@
     <title>Vgas-five | Ingénierie & Technologie</title>
     <link rel="stylesheet" href="style.css">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800;900&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="CSS/Style.css">
 </head>
 <body>
 
@@ -18,6 +17,7 @@
             </div>
             <ul class="nav-links">
                 <li><a href="#hero">Accueil</a></li>
+                <li><a href="#vision">Notre Vision</a></li>
                 <li><a href="#services">Expertise</a></li>
                 <li><a href="#contact-section" class="btn-nav">Lancez un projet</a></li>
             </ul>
@@ -29,7 +29,7 @@
             <div class="container hero-grid">
                 <div class="hero-text fade-in">
                     <h1>L'ingénierie <span class="text-blue">Vgas-five</span></h1>
-                    <p>Nous concevons les infrastructures de demain avec une précision mathématique et une vision technologique d'avant-garde. </p>
+                    <p>Nous concevons les infrastructures de demain avec une précision mathématique et une vision technologique d'avant-garde.</p>
                     <div class="cta-group">
                         <a href="#services" class="btn-main">Nos Services</a>
                         <a href="#contact-section" class="btn-outline">Nous contacter</a>
@@ -37,6 +37,48 @@
                 </div>
                 <div class="hero-visual">
                     <div class="tech-blob"></div>
+                </div>
+            </div>
+        </section>
+
+        <section id="vision" class="vision-section">
+            <div class="container">
+                <div class="section-header fade-in">
+                    <span class="subtitle">Notre Histoire</span>
+                    <h2>Une Vision Africaine</h2>
+                    <div class="bar"></div>
+                </div>
+                
+                <div class="vision-content fade-in">
+                    <p><strong>Vgas-five</strong> est né d'une vision grandiose : propulser la Guinée, l'Afrique et le monde dans une ère nouvelle de modernité technologique. </p>
+                    <p>Fondée par des jeunes guinéens déterminés, l'agence a conservé le nom <strong>"Five"</strong> par loyauté envers ses racines et les membres qui ont débuté cette aventure ensemble. Cette force morale définit notre engagement envers nos clients.</p>
+                </div>
+
+                <div class="team-grid">
+                    <div class="member-card fade-in">
+                        <div class="member-info">
+                            <h4>Jean King Zobila</h4>
+                            <span>Cofondateur</span>
+                        </div>
+                    </div>
+                    <div class="member-card fade-in">
+                        <div class="member-info">
+                            <h4>Mamadou Malal Diallo</h4>
+                            <span>Cofondateur</span>
+                        </div>
+                    </div>
+                    <div class="member-card fade-in">
+                        <div class="member-info">
+                            <h4>Tierno Ibrahima Niang</h4>
+                            <span>Cofondateur</span>
+                        </div>
+                    </div>
+                    <div class="member-card fade-in">
+                        <div class="member-info">
+                            <h4>Pépé Richard Doualamou</h4>
+                            <span>Cofondateur</span>
+                        </div>
+                    </div>
                 </div>
             </div>
         </section>
@@ -62,8 +104,8 @@
                     </article>
                     <article class="service-card fade-in">
                         <div class="service-icon">03</div>
-                        <h3>Type de Site </h3>
-                        <p>Nous réalisons des sites vitrines pour vos entreprises et commerces !</p>
+                        <h3>Sites Web Pros</h3>
+                        <p>Nous réalisons des sites vitrines modernes pour vos entreprises et commerces.</p>
                     </article>
                 </div>
             </div>
@@ -92,7 +134,7 @@
                             </div>
                             <div class="form-group">
                                 <label>Email ou Téléphone</label>
-                                <input type="text" name="contact" placeholder="contact@exemple.com" required>
+                                    <input type="text" name="contact" placeholder="contact@exemple.com" required>
                             </div>
                             <div class="form-group">
                                 <label>Description de votre besoin</label>
@@ -116,7 +158,6 @@
     </footer>
 
     <script>
-        // Animation au défilement
         const observer = new IntersectionObserver((entries) => {
             entries.forEach(entry => {
                 if (entry.isIntersecting) entry.target.classList.add('visible');
@@ -125,7 +166,6 @@
 
         document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
 
-        // Envoi de formulaire AJAX
         const form = document.getElementById('vgas-form');
         const btn = document.getElementById('submit-btn');
 
