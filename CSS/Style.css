@@ -72,3 +72,62 @@ body { font-family: 'Inter', sans-serif; color: var(--text-main); background: va
     .contact-info-side, .contact-form-side { padding: 40px; }
     .nav-links { display: none; }
 }
+/* --- Section Vision & Équipe (Thème Bleu & Blanc) --- */
+.vision-section {
+    padding: 80px 0;
+    background: #ffffff; /* On reste sur du blanc pur */
+}
+
+.vision-content {
+    max-width: 800px;
+    margin: 0 auto 50px auto;
+    text-align: center;
+    line-height: 1.8;
+    font-size: 1.1rem;
+    color: #333; /* Texte gris très foncé pour la lisibilité */
+}
+
+.team-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 30px;
+}
+
+.member-card {
+    background: #ffffff;
+    padding: 30px;
+    border-radius: 12px;
+    /* Ombre très légère et bleutée pour rester dans ton thème */
+    box-shadow: 0 4px 20px rgba(0, 102, 255, 0.1); 
+    text-align: center;
+    border: 1px solid #eef2f7; /* Bordure très claire */
+    transition: transform 0.3s ease;
+}
+
+.member-card:hover {
+    transform: translateY(-5px);
+    border-color: #0066ff; /* La bordure devient bleue au survol */
+}
+
+.member-info h4 {
+    font-size: 1.2rem;
+    margin-bottom: 5px;
+    color: #1a1a1a;
+}
+
+.member-info span {
+    color: #0066ff; /* Ton bleu pour les rôles */
+    font-weight: 600;
+    font-size: 0.85rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+/* On s'assure que les titres de section utilisent ton bleu */
+.section-header h2 {
+    color: #1a1a1a;
+}
+
+.text-blue {
+    color: #0066ff;
+                                         }
