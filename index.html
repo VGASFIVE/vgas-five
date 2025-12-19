@@ -17,8 +17,9 @@
             </div>
             <ul class="nav-links">
                 <li><a href="#hero">Accueil</a></li>
-                <li><a href="#vision">Notre Vision</a></li>
-                <li><a href="#services">Expertise</a></li>
+                <li><a href="#vision">Vision</a></li>
+                <li><a href="#projets">Projets</a></li>
+                <li><a href="#tarifs">Tarifs</a></li>
                 <li><a href="#contact-section" class="btn-nav">Lancez un projet</a></li>
             </ul>
         </nav>
@@ -31,7 +32,7 @@
                     <h1>L'ingénierie <span class="text-blue">Vgas-five</span></h1>
                     <p>Nous concevons les infrastructures de demain avec une précision mathématique et une vision technologique d'avant-garde.</p>
                     <div class="cta-group">
-                        <a href="#services" class="btn-main">Nos Services</a>
+                        <a href="#projets" class="btn-main">Nos Réalisations</a>
                         <a href="#contact-section" class="btn-outline">Nous contacter</a>
                     </div>
                 </div>
@@ -50,8 +51,8 @@
                 </div>
                 
                 <div class="vision-content fade-in">
-                    <p><strong>Vgas-five</strong> est né d'une vision grandiose : propulser la Guinée, l'Afrique et le monde dans une ère nouvelle de modernité technologique. </p>
-                    <p>Fondée par des jeunes guinéens déterminés, l'agence a conservé le nom <strong>"Five"</strong> par loyauté envers ses racines et les membres qui ont débuté cette aventure ensemble. Cette force morale définit notre engagement envers nos clients.</p>
+                    <p><strong>Vgas-five</strong> est né d'une vision grandiose : propulser la Guinée et l'Afrique dans une ère nouvelle de modernité technologique.</p>
+                    <p>Fondée par des jeunes guinéens déterminés, l'agence a conservé le nom <strong>"Five"</strong> par loyauté envers ses racines. Cette force morale définit notre engagement.</p>
                 </div>
 
                 <div class="team-grid">
@@ -83,30 +84,73 @@
             </div>
         </section>
 
-        <section id="services" class="services-tech">
+        <section id="projets" class="portfolio-tech">
             <div class="container">
                 <div class="section-header fade-in">
-                    <span class="subtitle">Expertise</span>
-                    <h2>Solutions de Haute Performance</h2>
+                    <span class="subtitle">Réalisations</span>
+                    <h2>Nos Projets Récents</h2>
                     <div class="bar"></div>
                 </div>
-                
-                <div class="services-grid">
-                    <article class="service-card fade-in">
-                        <div class="service-icon">01</div>
-                        <h3>Cloud & DevOps</h3>
-                        <p>Optimisation des cycles de déploiement et scalabilité de vos infrastructures.</p>
+
+                <div class="projects-grid">
+                    <article class="project-card fade-in">
+                        <div class="img-placeholder">Vgas-five Web</div>
+                        <div class="project-info">
+                            <h3>Vgas-five Official</h3>
+                            <p>Site vitrine haute performance pour notre agence technologique.</p>
+                            <span class="tag">HTML / CSS / Netlify</span>
+                        </div>
                     </article>
-                    <article class="service-card fade-in">
-                        <div class="service-icon">02</div>
-                        <h3>Cybersécurité</h3>
-                        <p>Protection proactive de vos données contre les intrusions sophistiquées.</p>
+
+                    <article class="project-card fade-in">
+                        <div class="img-placeholder">E-Commerce</div>
+                        <div class="project-info">
+                            <h3>Boutique Moderne</h3>
+                            <p>Concept de boutique en ligne optimisée pour le marché local.</p>
+                            <span class="tag">Design Tech</span>
+                        </div>
                     </article>
-                    <article class="service-card fade-in">
-                        <div class="service-icon">03</div>
-                        <h3>Sites Web Pros</h3>
-                        <p>Nous réalisons des sites vitrines modernes pour vos entreprises et commerces.</p>
-                    </article>
+                </div>
+            </div>
+        </section>
+
+        <section id="tarifs" class="pricing-tech">
+            <div class="container">
+                <div class="section-header fade-in">
+                    <span class="subtitle">Investissement</span>
+                    <h2>Nos Solutions</h2>
+                    <div class="bar"></div>
+                </div>
+
+                <div class="pricing-grid">
+                    <div class="price-card fade-in">
+                        <div class="price-header">
+                            <h3>Pack Vitrine</h3>
+                            <div class="price">750 000 <span>GNF</span></div>
+                        </div>
+                        <ul class="price-features">
+                            <li>✔ Design Bleu & Blanc</li>
+                            <li>✔ Nom de domaine .com (1 an)</li>
+                            <li>✔ Certificat SSL Sécurisé</li>
+                            <li>✔ Optimisation Mobile</li>
+                        </ul>
+                        <a href="#contact-section" class="btn-outline full-width">Choisir</a>
+                    </div>
+
+                    <div class="price-card featured fade-in">
+                        <div class="badge">Recommandé</div>
+                        <div class="price-header">
+                            <h3>Pack Business</h3>
+                            <div class="price">1 500 000 <span>GNF</span></div>
+                        </div>
+                        <ul class="price-features">
+                            <li>✔ Tout du Pack Vitrine</li>
+                            <li>✔ Jusqu'à 5 pages</li>
+                            <li>✔ Base de données (Firebase)</li>
+                            <li>✔ Support 6 mois</li>
+                        </ul>
+                        <a href="#contact-section" class="btn-main full-width">Lancer</a>
+                    </div>
                 </div>
             </div>
         </section>
@@ -134,7 +178,7 @@
                             </div>
                             <div class="form-group">
                                 <label>Email ou Téléphone</label>
-                                    <input type="text" name="contact" placeholder="contact@exemple.com" required>
+                                <input type="text" name="contact" placeholder="contact@exemple.com" required>
                             </div>
                             <div class="form-group">
                                 <label>Description de votre besoin</label>
@@ -158,21 +202,25 @@
     </footer>
 
     <script>
+        // Observateur d'intersection amélioré pour mobile
         const observer = new IntersectionObserver((entries) => {
             entries.forEach(entry => {
-                if (entry.isIntersecting) entry.target.classList.add('visible');
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                }
             });
-        }, { threshold: 0.1 });
+        }, { threshold: 0.05 });
 
         document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
 
+        // Gestion du formulaire
         const form = document.getElementById('vgas-form');
         const btn = document.getElementById('submit-btn');
 
         form.addEventListener('submit', async (e) => {
             e.preventDefault();
             btn.disabled = true;
-            btn.innerText = "Transmission en cours...";
+            btn.innerText = "Transmission...";
             
             try {
                 const response = await fetch(form.action, {
@@ -190,9 +238,7 @@
                         btn.innerText = "Envoyer la demande";
                         btn.disabled = false;
                     }, 5000);
-                } else {
-                    throw new Error();
-                }
+                } else { throw new Error(); }
             } catch (err) {
                 btn.innerText = "Erreur. Réessayez.";
                 btn.disabled = false;
