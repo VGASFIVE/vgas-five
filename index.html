@@ -42,119 +42,6 @@
             </div>
         </section>
 
-        <section id="vision" class="vision-section">
-            <div class="container">
-                <div class="section-header fade-in">
-                    <span class="subtitle">Notre Histoire</span>
-                    <h2>Une Vision Africaine</h2>
-                    <div class="bar"></div>
-                </div>
-                
-                <div class="vision-content fade-in">
-                    <p><strong>Vgas-five</strong> est né d'une vision grandiose : propulser la Guinée et l'Afrique dans une ère nouvelle de modernité technologique.</p>
-                    <p>Fondée par des jeunes guinéens déterminés, l'agence a conservé le nom <strong>"Five"</strong> par loyauté envers ses racines. Cette force morale définit notre engagement.</p>
-                </div>
-
-                <div class="team-grid">
-                    <div class="member-card fade-in">
-                        <div class="member-info">
-                            <h4>Jean King Zobila</h4>
-                            <span>Cofondateur</span>
-                        </div>
-                    </div>
-                    <div class="member-card fade-in">
-                        <div class="member-info">
-                            <h4>Mamadou Malal Diallo</h4>
-                            <span>Cofondateur</span>
-                        </div>
-                    </div>
-                    <div class="member-card fade-in">
-                        <div class="member-info">
-                            <h4>Tierno Ibrahima Niang</h4>
-                            <span>Cofondateur</span>
-                        </div>
-                    </div>
-                    <div class="member-card fade-in">
-                        <div class="member-info">
-                            <h4>Pépé Richard Doualamou</h4>
-                            <span>Cofondateur</span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <section id="projets" class="portfolio-tech">
-            <div class="container">
-                <div class="section-header fade-in">
-                    <span class="subtitle">Réalisations</span>
-                    <h2>Nos Projets Récents</h2>
-                    <div class="bar"></div>
-                </div>
-
-                <div class="projects-grid">
-                    <article class="project-card fade-in">
-                        <div class="img-placeholder">Vgas-five Web</div>
-                        <div class="project-info">
-                            <h3>Vgas-five Official</h3>
-                            <p>Site vitrine haute performance pour notre agence technologique.</p>
-                            <span class="tag">HTML / CSS / Netlify</span>
-                        </div>
-                    </article>
-
-                    <article class="project-card fade-in">
-                        <div class="img-placeholder">E-Commerce</div>
-                        <div class="project-info">
-                            <h3>Boutique Moderne</h3>
-                            <p>Concept de boutique en ligne optimisée pour le marché local.</p>
-                            <span class="tag">Design Tech</span>
-                        </div>
-                    </article>
-                </div>
-            </div>
-        </section>
-
-        <section id="tarifs" class="pricing-tech">
-            <div class="container">
-                <div class="section-header fade-in">
-                    <span class="subtitle">Investissement</span>
-                    <h2>Nos Solutions</h2>
-                    <div class="bar"></div>
-                </div>
-
-                <div class="pricing-grid">
-                    <div class="price-card fade-in">
-                        <div class="price-header">
-                            <h3>Pack Vitrine</h3>
-                            <div class="price">750 000 <span>GNF</span></div>
-                        </div>
-                        <ul class="price-features">
-                            <li>✔ Design Bleu & Blanc</li>
-                            <li>✔ Nom de domaine .com (1 an)</li>
-                            <li>✔ Certificat SSL Sécurisé</li>
-                            <li>✔ Optimisation Mobile</li>
-                        </ul>
-                        <a href="#contact-section" class="btn-outline full-width">Choisir</a>
-                    </div>
-
-                    <div class="price-card featured fade-in">
-                        <div class="badge">Recommandé</div>
-                        <div class="price-header">
-                            <h3>Pack Business</h3>
-                            <div class="price">1 500 000 <span>GNF</span></div>
-                        </div>
-                        <ul class="price-features">
-                            <li>✔ Tout du Pack Vitrine</li>
-                            <li>✔ Jusqu'à 5 pages</li>
-                            <li>✔ Base de données (Firebase)</li>
-                            <li>✔ Support 6 mois</li>
-                        </ul>
-                        <a href="#contact-section" class="btn-main full-width">Lancer</a>
-                    </div>
-                </div>
-            </div>
-        </section>
-
         <section id="contact-section" class="contact-tech-inline">
             <div class="container">
                 <div class="contact-wrapper fade-in">
@@ -166,15 +53,15 @@
 
                     <div class="contact-form-side">
                         <form 
-                            name="contact-vgas-final" 
+                            name="vgas_contact" 
                             method="POST" 
-                            class="contact-form" 
                             data-netlify="true" 
-                            data-netlify-recaptcha="true" 
                             data-netlify-honeypot="bot-field"
+                            class="contact-form"
                         >
+                            <input type="hidden" name="form-name" value="vgas_contact" />
                             <input type="hidden" name="bot-field" />
-                            
+
                             <div class="form-row">
                                 <div class="form-group">
                                     <label>Nom</label>
@@ -194,7 +81,7 @@
                                 <textarea name="message" rows="5" placeholder="Comment pouvons-nous vous aider ?" required></textarea>
                             </div>
 
-                            <div data-netlify-recaptcha="true" style="margin-bottom: 20px;"></div>
+                            <div data-netlify-recaptcha="true"></div>
 
                             <button type="submit" class="btn-main full-width">Envoyer la demande</button>
                         </form>
@@ -214,7 +101,6 @@
     </footer>
 
     <script>
-        // Animations d'apparition au défilement
         const observer = new IntersectionObserver((entries) => {
             entries.forEach(entry => {
                 if (entry.isIntersecting) {
