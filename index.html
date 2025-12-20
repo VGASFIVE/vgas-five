@@ -49,37 +49,15 @@
                     <h2>Une Vision Africaine</h2>
                     <div class="bar"></div>
                 </div>
-                
                 <div class="vision-content fade-in">
                     <p><strong>Vgas-five</strong> est né d'une vision grandiose : propulser la Guinée et l'Afrique dans une ère nouvelle de modernité technologique.</p>
-                    <p>Fondée par des jeunes guinéens déterminés, l'agence a conservé le nom <strong>"Five"</strong> par loyauté envers ses racines. Cette force morale définit notre engagement.</p>
+                    <p>Fondée par des jeunes guinéens déterminés, l'agence a conservé le nom <strong>"Five"</strong> par loyauté envers ses racines.</p>
                 </div>
-
                 <div class="team-grid">
-                    <div class="member-card fade-in">
-                        <div class="member-info">
-                            <h4>Jean King Zobila</h4>
-                            <span>Cofondateur</span>
-                        </div>
-                    </div>
-                    <div class="member-card fade-in">
-                        <div class="member-info">
-                            <h4>Mamadou Malal Diallo</h4>
-                            <span>Cofondateur</span>
-                        </div>
-                    </div>
-                    <div class="member-card fade-in">
-                        <div class="member-info">
-                            <h4>Tierno Ibrahima Niang</h4>
-                            <span>Cofondateur</span>
-                        </div>
-                    </div>
-                    <div class="member-card fade-in">
-                        <div class="member-info">
-                            <h4>Pépé Richard Doualamou</h4>
-                            <span>Cofondateur</span>
-                        </div>
-                    </div>
+                    <div class="member-card fade-in"><h4>Jean King Zobila</h4><span>Cofondateur</span></div>
+                    <div class="member-card fade-in"><h4>Mamadou Malal Diallo</h4><span>Cofondateur</span></div>
+                    <div class="member-card fade-in"><h4>Tierno Ibrahima Niang</h4><span>Cofondateur</span></div>
+                    <div class="member-card fade-in"><h4>Pépé Richard Doualamou</h4><span>Cofondateur</span></div>
                 </div>
             </div>
         </section>
@@ -91,22 +69,20 @@
                     <h2>Nos Projets Récents</h2>
                     <div class="bar"></div>
                 </div>
-
                 <div class="projects-grid">
                     <article class="project-card fade-in">
                         <div class="img-placeholder">Vgas-five Web</div>
                         <div class="project-info">
                             <h3>Vgas-five Official</h3>
-                            <p>Site vitrine haute performance pour notre agence technologique.</p>
+                            <p>Site vitrine haute performance.</p>
                             <span class="tag">HTML / CSS / Netlify</span>
                         </div>
                     </article>
-
                     <article class="project-card fade-in">
                         <div class="img-placeholder">E-Commerce</div>
                         <div class="project-info">
                             <h3>Boutique Moderne</h3>
-                            <p>Concept de boutique en ligne optimisée pour le marché local.</p>
+                            <p>Concept optimisé pour le marché local.</p>
                             <span class="tag">Design Tech</span>
                         </div>
                     </article>
@@ -121,34 +97,16 @@
                     <h2>Nos Solutions</h2>
                     <div class="bar"></div>
                 </div>
-
                 <div class="pricing-grid">
                     <div class="price-card fade-in">
-                        <div class="price-header">
-                            <h3>Pack Vitrine</h3>
-                            <div class="price">750 000 <span>GNF</span></div>
-                        </div>
-                        <ul class="price-features">
-                            <li>✔ Design Bleu & Blanc</li>
-                            <li>✔ Nom de domaine .com (1 an)</li>
-                            <li>✔ Certificat SSL Sécurisé</li>
-                            <li>✔ Optimisation Mobile</li>
-                        </ul>
+                        <h3>Pack Vitrine</h3>
+                        <div class="price">750 000 <span>GNF</span></div>
                         <a href="#contact-section" class="btn-outline full-width">Choisir</a>
                     </div>
-
                     <div class="price-card featured fade-in">
                         <div class="badge">Recommandé</div>
-                        <div class="price-header">
-                            <h3>Pack Business</h3>
-                            <div class="price">1 500 000 <span>GNF</span></div>
-                        </div>
-                        <ul class="price-features">
-                            <li>✔ Tout du Pack Vitrine</li>
-                            <li>✔ Jusqu'à 5 pages</li>
-                            <li>✔ Base de données (Firebase)</li>
-                            <li>✔ Support 6 mois</li>
-                        </ul>
+                        <h3>Pack Business</h3>
+                        <div class="price">1 500 000 <span>GNF</span></div>
                         <a href="#contact-section" class="btn-main full-width">Lancer</a>
                     </div>
                 </div>
@@ -160,7 +118,7 @@
                 <div class="contact-wrapper fade-in">
                     <div class="contact-info-side">
                         <h2>Prêt à innover ?</h2>
-                        <p>Remplissez le formulaire et recevez une réponse de notre équipe sous 24h.</p>
+                        <p>Remplissez le formulaire. Netlify validera votre message via le CAPTCHA pour nous l'envoyer en toute sécurité.</p>
                         <div class="contact-mail-display">jeankingzobila8@gmail.com</div>
                     </div>
 
@@ -168,8 +126,8 @@
                         <form 
                             name="contact_vgas_final" 
                             method="POST" 
-                            action="/" 
                             data-netlify="true" 
+                            data-netlify-recaptcha="true"
                             data-netlify-honeypot="bot-field"
                             class="contact-form"
                         >
@@ -191,8 +149,8 @@
                                 <input type="text" name="contact" placeholder="contact@exemple.com" required>
                             </div>
                             <div class="form-group">
-                                <label>Description de votre besoin</label>
-                                <textarea name="message" rows="5" placeholder="Comment pouvons-nous vous aider ?" required></textarea>
+                                <label>Message</label>
+                                <textarea name="message" rows="5" placeholder="Votre projet..." required></textarea>
                             </div>
 
                             <div data-netlify-recaptcha="true" style="margin-bottom: 20px;"></div>
@@ -215,7 +173,6 @@
     </footer>
 
     <script>
-        // Animation au défilement
         const observer = new IntersectionObserver((entries) => {
             entries.forEach(entry => {
                 if (entry.isIntersecting) {
