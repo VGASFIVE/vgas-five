@@ -165,7 +165,21 @@
                     </div>
 
                     <div class="contact-form-side">
-                        <form action="https://formspree.io/f/mykgggyp" method="POST" class="contact-form" id="vgas-form">
+                        <form 
+                            name="contact-vgas" 
+                            method="POST" 
+                            class="contact-form" 
+                            id="vgas-form" 
+                            data-netlify="true" 
+                            data-netlify-recaptcha="true" 
+                            data-netlify-honeypot="bot-field"
+                        >
+                            <input type="hidden" name="form-name" value="contact-vgas" />
+                            
+                            <p style="display:none;">
+                                <label>Ne pas remplir ce champ : <input name="bot-field" /></label>
+                            </p>
+
                             <div class="form-row">
                                 <div class="form-group">
                                     <label>Nom</label>
@@ -184,6 +198,9 @@
                                 <label>Description de votre besoin</label>
                                 <textarea name="message" rows="5" placeholder="Comment pouvons-nous vous aider ?" required></textarea>
                             </div>
+
+                            <div data-netlify-recaptcha="true" style="margin-bottom: 20px;"></div>
+
                             <button type="submit" class="btn-main full-width" id="submit-btn">Envoyer la demande</button>
                         </form>
                     </div>
@@ -202,7 +219,6 @@
     </footer>
 
     <script>
-        // Observateur d'intersection amélioré pour mobile
         const observer = new IntersectionObserver((entries) => {
             entries.forEach(entry => {
                 if (entry.isIntersecting) {
@@ -213,7 +229,6 @@
 
         document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
 
-        // Gestion du formulaire
         const form = document.getElementById('vgas-form');
         const btn = document.getElementById('submit-btn');
 
@@ -222,11 +237,13 @@
             btn.disabled = true;
             btn.innerText = "Transmission...";
             
+            const formData = new FormData(form);
+            
             try {
-                const response = await fetch(form.action, {
+                const response = await fetch("/", {
                     method: 'POST',
-                    body: new FormData(form),
-                    headers: { 'Accept': 'application/json' }
+                    headers: { "Content-Type": "application/x-www-form-urlencoded" },
+                    body: new URLSearchParams(formData).toString()
                 });
 
                 if (response.ok) {
