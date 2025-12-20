@@ -234,12 +234,21 @@
 
         form.addEventListener('submit', async (e) => {
             e.preventDefault();
+
+            // Vérifier si le CAPTCHA a été coché
+            const captcha = form.querySelector('[name="g-recaptcha-response"]');
+            if (captcha && captcha.value === "") {
+                alert("Veuillez confirmer que vous n'êtes pas un robot.");
+                return;
+            }
+
             btn.disabled = true;
             btn.innerText = "Transmission...";
             
             const formData = new FormData(form);
             
             try {
+                // Envoi vers la racine "/" comme requis par Netlify
                 const response = await fetch("/", {
                     method: 'POST',
                     headers: { "Content-Type": "application/x-www-form-urlencoded" },
@@ -250,12 +259,17 @@
                     btn.style.background = "#00c853";
                     btn.innerText = "Message Reçu ! ✔";
                     form.reset();
+                    // Réinitialiser le widget captcha visuellement après succès
+                    if (typeof grecaptcha !== 'undefined') grecaptcha.reset();
+                    
                     setTimeout(() => {
                         btn.style.background = "#0066ff";
                         btn.innerText = "Envoyer la demande";
                         btn.disabled = false;
                     }, 5000);
-                } else { throw new Error(); }
+                } else { 
+                    throw new Error("Erreur Netlify"); 
+                }
             } catch (err) {
                 btn.innerText = "Erreur. Réessayez.";
                 btn.disabled = false;
