@@ -9,15 +9,18 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800;900&display=swap" rel="stylesheet">
 
     <style>
-        /* --- AJOUTS CSS POUR LES TARIFS ET LE RESPONSIVE (STYLE BLEU & BLANC) --- */
+        /* --- DESIGN SYSTÈME VGUES-FIVE (Bleu & Blanc) --- */
         :root {
             --vgas-blue: #007bff;
             --vgas-white: #ffffff;
+            --vgas-dark: #1a1a1a;
+            --vgas-light-bg: #f8f9fa;
         }
 
+        /* Tarifs Section */
         .tarifs-section {
             padding: 80px 0;
-            background-color: #f8f9fa;
+            background-color: var(--vgas-light-bg);
         }
 
         .pricing-grid {
@@ -29,13 +32,14 @@
 
         .pricing-card {
             background: var(--vgas-white);
-            padding: 35px;
+            padding: 40px;
             border-radius: 12px;
             border: 1px solid #e1e8ed;
             text-align: center;
             transition: all 0.3s ease;
             display: flex;
             flex-direction: column;
+            position: relative;
         }
 
         .pricing-card:hover {
@@ -46,7 +50,6 @@
 
         .pricing-card.featured {
             border: 2px solid var(--vgas-blue);
-            position: relative;
         }
 
         .featured-badge {
@@ -63,8 +66,8 @@
             text-transform: uppercase;
         }
 
-        .price-box h3 { font-size: 22px; color: #333; margin-bottom: 10px; }
-        .price-box .amount { font-size: 30px; font-weight: 900; color: var(--vgas-blue); }
+        .price-box h3 { font-size: 22px; color: var(--vgas-dark); margin-bottom: 5px; }
+        .price-box .amount { font-size: 28px; font-weight: 900; color: var(--vgas-blue); margin-bottom: 20px; }
 
         .pricing-features {
             list-style: none;
@@ -75,7 +78,7 @@
         }
 
         .pricing-features li {
-            padding: 8px 0;
+            padding: 10px 0;
             font-size: 14px;
             color: #555;
             border-bottom: 1px solid #f1f1f1;
@@ -98,17 +101,19 @@
             font-weight: 700;
             transition: 0.3s;
             text-align: center;
+            text-transform: uppercase;
+            font-size: 13px;
         }
 
-        .btn-vgas-full { background: var(--vgas-blue); color: white; }
+        .btn-vgas-full { background: var(--vgas-blue); color: white; border: none; cursor: pointer; }
         .btn-vgas-outline { border: 2px solid var(--vgas-blue); color: var(--vgas-blue); }
         .btn-vgas-outline:hover { background: var(--vgas-blue); color: white; }
 
-        /* RESPONSIVITÉ SMARTPHONE ANDROID & TABLETTE */
+        /* RESPONSIVE ANDROID & TABLETTE */
         @media (max-width: 768px) {
             .pricing-grid { grid-template-columns: 1fr; padding: 0 15px; }
-            .hero-grid { text-align: center; }
-            .nav-links { display: none; } /* On cache souvent le menu texte sur mobile pour un menu burger, ou on le laisse selon votre CSS d'origine */
+            .hero-grid { text-align: center; flex-direction: column; }
+            .nav-links { display: none; } /* Menu caché sur mobile pour simplifier sans JS complexe */
         }
     </style>
 </head>
@@ -180,7 +185,7 @@
         <section id="tarifs" class="tarifs-section">
             <div class="container">
                 <div class="section-header fade-in">
-                    <h2>Nos Packs Web</h2>
+                    <h2>Nos Tarifs Web</h2>
                     <div class="bar"></div>
                 </div>
 
@@ -188,13 +193,14 @@
                     <div class="pricing-card fade-in">
                         <div class="price-box">
                             <h3>Pack Vitrine</h3>
-                            <p class="amount">Sur Devis</p>
+                            <p class="amount">700 000 FG</p>
                         </div>
                         <ul class="pricing-features">
+                            <li><strong>Maximum 2 pages</strong></li>
                             <li>Design Responsive (Android/Tablette)</li>
-                            <li>Structure 1 à 5 pages</li>
-                            <li>Optimisation SEO</li>
+                            <li>Optimisation SEO de base</li>
                             <li>Formulaire de contact</li>
+                            <li>Hébergement (Assistance)</li>
                         </ul>
                         <a href="#contact-section" class="btn-pricing btn-vgas-outline">Choisir Vitrine</a>
                     </div>
@@ -203,13 +209,14 @@
                         <div class="featured-badge">Recommandé</div>
                         <div class="price-box">
                             <h3>Pack Business</h3>
-                            <p class="amount">Sur Devis</p>
+                            <p class="amount">1 500 000 FG</p>
                         </div>
                         <ul class="pricing-features">
-                            <li>Nombre de pages illimité</li>
+                            <li><strong>Jusqu'à 5 pages</strong></li>
                             <li>Gestion de contenu (CMS)</li>
-                            <li>Catalogue / Blog</li>
-                            <li>Support prioritaire</li>
+                            <li>Design Personnalisé</li>
+                            <li>Statistiques d'audience</li>
+                            <li>Support technique prioritaire</li>
                         </ul>
                         <a href="#contact-section" class="btn-pricing btn-vgas-full">Choisir Business</a>
                     </div>
@@ -257,7 +264,7 @@
                                 <textarea name="message" rows="5" placeholder="Décrivez votre projet..." required></textarea>
                             </div>
                             <div data-netlify-recaptcha="true" style="margin-bottom: 20px;"></div>
-                            <button type="submit" class="btn-main full-width">Envoyer la demande</button>
+                            <button type="submit" class="btn-main full-width" style="width:100%; cursor:pointer;">Envoyer la demande</button>
                         </form>
                     </div>
                 </div>
@@ -266,7 +273,7 @@
     </main>
 
     <footer class="footer-tech">
-        <div class="container" style="text-align: center; padding: 30px 0;">
+        <div class="container" style="text-align: center; padding: 40px 0;">
             <p>&copy; 2025 Vgas-five. Tous droits réservés.</p>
         </div>
     </footer>
